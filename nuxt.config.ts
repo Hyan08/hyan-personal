@@ -1,5 +1,9 @@
-import { pwa } from './config/pwa'
+// 插件
+import path from 'node:path'
+import process from 'node:process'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { appDescription } from './constants/index'
+import { pwa } from './config/pwa'
 
 export default defineNuxtConfig({
   modules: [
@@ -10,7 +14,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
   ],
-
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -21,7 +24,22 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
+    '/assets/css/reset.css',
   ],
+
+  vite: {
+    plugins: [
+      // svg插件
+      createSvgIconsPlugin({
+        iconDirs: [path.resolve(process.cwd(), 'assets/svg')],
+        symbolId: 'icon-[dir]-[name]',
+      }),
+    ],
+  },
+
+  build: {
+    transpile: ['gsap'],
+  },
 
   colorMode: {
     classSuffix: '',
@@ -55,6 +73,9 @@ export default defineNuxtConfig({
         { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
         { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
       ],
+      script: [
+        // { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js' },
+      ],
     },
   },
 
@@ -65,7 +86,6 @@ export default defineNuxtConfig({
   },
 
   features: {
-    // For UnoCSS
     inlineStyles: false,
   },
 
