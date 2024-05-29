@@ -4,7 +4,7 @@
 
 <template>
   <div
-    class="box relative inline-block h-16 w-auto overflow-hidden"
+    class="box relative inline-block w-auto overflow-hidden"
   >
     <VSvg class="animation w-full" name="signature" text="40" />
   </div>

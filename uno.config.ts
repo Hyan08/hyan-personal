@@ -21,6 +21,7 @@ export default defineConfig({
   ],
   shortcuts: [
     ['bg-theme', 'bg-m-light dark:bg-#1c1c1e'],
+    ['bg-theme0', 'bg-white dark:bg-#1c1c1e'],
     ['bg-theme1', 'bg-#E5E5EA dark:bg-#2C2C2E'],
     ['bg-theme2', 'bg-#D1D1D6 dark:bg-#3A3A3C'],
     ['bg-theme3', 'bg-#C7C7CC dark:bg-#48484A'],

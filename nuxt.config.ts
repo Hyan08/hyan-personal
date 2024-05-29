@@ -74,7 +74,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
       ],
       script: [
-        // { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js' },
+        { src: '/js/gsap.min.js' },
       ],
     },
   },

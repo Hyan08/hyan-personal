@@ -1,16 +1,44 @@
-import type { RouteNamedMap } from 'vue-router/auto/routes'
+import { useTheme } from '@/hooks/useTheme'
+// @unocss-include
 
-export interface MenuItem {
-  name: string
-  icon?: string
-  routeName: keyof RouteNamedMap
-  children?: MenuItem[]
+export enum MenuPositon {
+  left,
+  right,
 }
 
-export const menuItems: MenuItem[] = [{
-  name: 'about',
-  routeName: 'about',
-}, {
-  name: 'travel',
-  routeName: 'travel',
-}]
+export interface MenuItem {
+  icon: string
+  route?: string
+  title?: string
+  position?: MenuPositon
+  cb?: Function
+}
+
+export const menus: MenuItem[] = [
+  {
+    icon: 'i-iconoir-home',
+    route: '/',
+    title: 'Home',
+  },
+  {
+    icon: 'i-iconoir-book',
+    route: '/about',
+    title: 'About Me',
+  },
+  {
+    icon: 'i-iconoir:people-tag',
+    route: '/travel',
+    title: 'Travel Log',
+  },
+  {
+    icon: 'i-iconoir:flask',
+    route: '/lab',
+    title: 'Laboratory',
+  },
+  {
+    icon: 'i-iconoir:sun-light dark:i-iconoir:half-moon',
+    title: 'Toggle Theme',
+    position: MenuPositon.right,
+    cb: useTheme,
+  },
+]
