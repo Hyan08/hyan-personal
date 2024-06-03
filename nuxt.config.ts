@@ -45,7 +45,11 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  // 修改generate打包输出的路径为根路径下的dist文件，便于自动化部署静态
   nitro: {
+    output: {
+      publicDir: path.join(__dirname, 'dist'),
+    },
     esbuild: {
       options: {
         target: 'esnext',

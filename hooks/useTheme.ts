@@ -11,6 +11,14 @@ function onChangeTheme() {
   color.preference = isDark() ? 'light' : 'dark'
 }
 
+/**
+ * 检测用户的系统是否被开启了动画减弱功能
+ * @link https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion
+ */
+function isReducedMotion() {
+  return window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
+}
+
 export function useTheme(event: MouseEvent) {
   const willDark = !isDark()
   // 浏览器新特性不支持 或者 开启了动画减弱
@@ -48,12 +56,4 @@ export function useTheme(event: MouseEvent) {
       },
     )
   })
-}
-
-/**
- * 检测用户的系统是否被开启了动画减弱功能
- * @link https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion
- */
-function isReducedMotion() {
-  return window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
 }
