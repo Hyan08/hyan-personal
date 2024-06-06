@@ -26,7 +26,7 @@ import mySignature from './components/mySignature.vue'
     <div
       class="mb-5 size-20 overflow-hidden rounded-50% ring-2 ring-mLight3 transition-300 hover:ring-size-5 dark:ring-mDark3"
     >
-      <img class="size-20" src="http://images.lihuihuang.cn/hyan.png" lazy>
+      <img class="size-20" src="http://images.lihuihuang.cn/hyan.png">
     </div>
     <!-- 标签 -->
     <div class="flex items-center text-8">
