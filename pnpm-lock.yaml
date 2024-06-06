@@ -11,6 +11,9 @@ devDependencies:
   '@hypernym/nuxt-gsap':
     specifier: ^2.4.2
     version: 2.4.2
+  '@iconify-json/bxl':
+    specifier: ^1.1.10
+    version: 1.1.10
   '@iconify-json/carbon':
     specifier: ^1.1.31
     version: 1.1.31
@@ -1841,6 +1844,12 @@ packages:
     resolution: {integrity: sha512-Oep+0ABn58PbJo4tX8A8ja2hGjjBtyFE7DJAF/q8DIDGXMFaZlTbvcreCmMdKhuJ5NR8ODE0fEObUEYci901gg==}
     dependencies:
       gsap: 3.12.5
+    dev: true
+
+  /@iconify-json/bxl@1.1.10:
+    resolution: {integrity: sha512-/+9L0XBI7vvP8tU2NVfqr45BjUndbTEaDuU6PERn9zKH0Rtsi9GDpaba7FY8PgA91ugGIpuwUPsFLCofkYreNg==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify-json/carbon@1.1.31:

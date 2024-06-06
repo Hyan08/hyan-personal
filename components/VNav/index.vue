@@ -41,8 +41,8 @@ const navOrder = computed(() => {
         @click="onChangeNav($event, item)"
       >
         <div
-          :class="[item.route === navActive ? 'bg-#01d17d' : 'dark:bg-white ', item.icon]"
-          group-hover="bg-#01d17d"
+          :class="[item.route === navActive ? 'bg-mTheme' : 'dark:bg-white ', item.icon]"
+          group-hover="bg-mTheme"
         />
         <!-- 描述 -->
         <div

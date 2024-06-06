@@ -52,6 +52,13 @@ export default defineConfig({
   theme: {
     colors: {
       mLight: '#f2f2f7',
+      mLight1: '#E5E5EA',
+      mLight2: '#D1D1D6',
+      mLight3: '#C7C7CC',
+      mLight4: '#AEAEB2',
+      mLight5: '#8E8E93',
+      mDark3: '#48484A',
+      mTheme: '#01d17d',
     },
     breakpoints: {
       xxs: '0px',

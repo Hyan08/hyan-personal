@@ -23,7 +23,11 @@ import mySignature from './components/mySignature.vue'
 
 <template>
   <div class="relative">
-    <div class="mb-5 size-20 rounded-10 bg-theme5" />
+    <div
+      class="mb-5 size-20 overflow-hidden rounded-50% ring-2 ring-mLight3 transition-300 hover:ring-size-5 dark:ring-mDark3"
+    >
+      <img class="size-20" src="http://images.lihuihuang.cn/hyan.png" lazy>
+    </div>
     <!-- 标签 -->
     <div class="flex items-center text-8">
       <span class="hello inline-block h-12 w-12 origin-bottom-right">👋</span>
@@ -38,7 +42,16 @@ import mySignature from './components/mySignature.vue'
     </div>
     <!-- 简介 -->
     <div class="">
-      <span class="text-4">In the flood of darkness, hope is the light. It brings comfort, faith, and confidence. It gives us guidance when we are lost, and gives support when we are afraid. And the moment we give up hope, we give up our lives. The world we live in is disintegrating into a place of malice and hatred, where we need hope and find it harder. In this world of fear, hope to find better, but easier said than done, the more meaningful life of faith will make life meaningful.</span>
+      <span class="text-4">
+        As a Gen Z-er, I'm all about freedom and sunshine, both in life and in the digital realm where I craft web wonders using
+        <div class="i-bxl-javascript inline-block bg-#f3e050" />,
+        <div class="i-iconoir-vue-js inline-block bg-#64b687" />,
+        <div class="i-bxl-typescript inline-block bg-#4476c0" />,
+        My newly launched website is a testament to breaking free from procrastination,
+        serving as my personal corner on the internet.
+        It's where I share my tech experiments, creative projects,
+        and musings on technology and design, all underlined by a sunny, optimistic vibe. Come, explore my world of code and creativity!
+      </span>
     </div>
   </div>
 </template>

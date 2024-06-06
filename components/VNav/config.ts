@@ -20,11 +20,11 @@ export const menus: MenuItem[] = [
     route: '/',
     title: 'Home',
   },
-  {
-    icon: 'i-iconoir-book',
-    route: '/about',
-    title: 'About Me',
-  },
+  // {
+  //   icon: 'i-iconoir-book',
+  //   route: '/about',
+  //   title: 'About Me',
+  // },
   {
     icon: 'i-iconoir:people-tag',
     route: '/travel',
